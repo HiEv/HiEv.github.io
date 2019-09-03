@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<meta name="Description" content="Gold webinar with Jim Rickards registration page">
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Gold Webinar with Jim Rickards" />
+		<link rel="stylesheet" href="normalize.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+		<script type='text/javascript' src='jquery-3.4.1.min.js'></script>
+		<title>Gold Webinar with Jim Rickards</title>
+		<style type="text/css">
+			/* Palette
+			:root {
+				--Light-Blue	: #699BBA;
+				--Medium-Blue	: #005282;
+				--Dark-Blue		: #05263A;
+				--Pink			: #F06676;
+			}
+			*/
+			html {
+				width: 100%;  /* IE full screen fix */
+			}
+			:-webkit-full-screen {  /* Chrome/Blink full screen fix */
+				background-color: white;
+			}
+			body {
+				font-family: arial, sans-serif;
+				font-size: large;
+				text-align: center;
+			}
+			h1 {
+				display: none;
+			}
+			hr {
+				width: 90%;
+				max-width: 700px;
+				height: 3px;
+				background-color: #005282; /* var(--Medium-Blue); */
+				border: 0;
+			}
+			button {
+				width: 95%;
+				max-width: 500px;
+				margin: 20px 0;
+				padding: 25px 0;
+				background-color: #005282; /* var(--Medium-Blue); */
+				color: white;
+				font-size: 1.5em;
+				font-weight: bold;
+				line-height: 150%;
+				border: solid black 1px;
+				border-radius: 10px;
+				cursor: pointer;
+				transition: background-color 0.1s;
+			}
+			button:hover {
+				background-color: #699BBA; /* var(--Light-Blue); */
+				text-shadow: 0 0 10px black;
+			}
+			button:focus {
+				outline: 3px dotted #135BCF;
+			}
+			#content {
+				margin: 50px 0;
+				display: inline-block;
+			}
+			@media (min-width: 400px) {
+				#content {
+					width: 85%;
+				}
+			}
+			@media (min-width: 800px) {
+				#content {
+					width: 80%;
+				}
+				#timeblock {
+					display: flex;
+				}
+				.calendar {
+					width: 33%;
+				}
+				.countdown {
+					width: 60%;
+					margin-left: 2%;
+				}
+				#infoblock {
+					display: flex;
+					margin: 20px 0;
+				}
+				#pic {
+					width: 45%;
+				}
+				#checklist {
+					width: 50%;
+				}
+			}
+			@media (min-width: 1000px) {
+				.Lato > span {
+					display: block;
+				}
+			}
+			@media (min-width: 1200px) {
+				#warning {
+					background: 4% 33px / 50px 50px no-repeat url(RGS_Hotlist_0617_Warning.png) #F06676;  /* var(--Pink); */
+				}
+			}
+			#header {
+				margin: 20px 14px;
+			}
+			.calendar {
+				display: block;
+				min-width: 300px;
+			}
+			.countdown {
+				display: block;
+			}
+			#ETA {
+				line-height: 170%;
+			}
+			#checklist {
+				padding: 25px;
+				background-color: #ebebeb;  /* Light gray */
+				color: black;
+			}
+			#claim p {
+				margin: 0;
+				padding: 40px 20px;
+			}
+			#claim::after {
+				position: relative;
+				top: 44px;
+				border-width: 50px 100px;
+				border-style: solid;
+				border-color: #05263A transparent transparent transparent;  /* var(--Dark-Blue); */
+				content: "";
+			}
+			.checked {
+				padding: 10px 10px 0px 90px;
+				background: no-repeat url("RGS_Hotlist_0617_CheckmarkBox.png");
+				min-height: 66px;
+				text-align: left;
+			}
+			.thin {
+				font-size: 1.2em;
+				line-height: 166%;
+			}
+			.medium {
+				font-size: 1.3em;
+				line-height: 150%;
+			}
+			.large {
+				font-size: xx-large;
+				line-height: 150%;
+			}
+			.huge {
+				font-size: 3em;
+			}
+			.Lato {
+				font-family: 'Lato', sans-serif;
+				font-size: xx-large;
+				font-weight: bold;
+				line-height: 150%;
+			}
+			.mediumblue {
+				background-color: white;
+				color: #005282; /* var(--Medium-Blue); */
+			}
+			.bluebox {
+				padding: 20px;
+				background-color: #699BBA; /* var(--Light-Blue); */
+				color: white;
+				text-align: center;
+				justify-content: center;
+			}
+			.bluebox p {
+				margin: 0.7em 0;
+			}
+			.portrait {
+				max-width: 95%;
+			}
+			.pinkbox {
+				padding: 20px;
+				background-color: #F06676; /* var(--Pink); */
+				color: white;
+				text-align: center;
+				justify-content: center;
+			}
+			/* checkboxPlus widget - Start */
+				input[type="checkbox"].cbhidden {
+					display: none;
+				}
+				input[type="checkbox"] + label.chklabel {
+					padding: 4px 4px 4px 40px;
+					position: relative;
+					user-select: none;
+					cursor: pointer;
+				}
+				:focus > input[type="checkbox"] + label.chklabel::before {
+					border: #135BCF 2px solid;
+					margin-left: 1px;
+					top: 2px;
+				}
+				input[type="checkbox"] + label.chklabel::before {
+					padding: 0 3px;
+					height: 16px;
+					width: 12px;
+					background: white;
+					border: 1px solid #999;  /* Gray */
+					border-radius: 5px;
+					content: ' ';
+					color: black;
+					line-height: 16px;
+					position: absolute;
+					text-align: center;
+					transform: translate(-140%, 50%);
+				}
+				input[type="checkbox"]:checked + label.chklabel::before {
+					content: '\2713';
+					font-weight: bold;
+					font-size: 0.7em;
+				}
+				input[type="checkbox"]:focus + label.chklabel::before {
+					border: #135BCF 2px solid;  /* Bright blue */
+					margin-left: 1px;
+				}
+				.chkbox {
+					display: grid;
+					margin: 0 10px;
+				}
+				.chkbox:focus {
+					outline: 2px dotted #135BCF;  /* Bright blue */
+				}
+			/* checkboxPlus widget - End */
+		</style>
+	</head>
+	<body>
+		<h1>Gold webinar with Jim Rickards - registration page</h1>
+		<div id="content">
+			<div id="header">
+				<p class="medium">Best-Selling Author and Gold Expert<br>
+				Jim Rickards Presents…</p>
+				<hr>
+				<p class="Lato">
+					<span>“In just days a Never-Before-Seen Gold Anomaly</span>
+					<span>Will Create a Totally New Class of Penny Gold Stocks…</span>
+				</p>
+				<p class="Lato">
+					<span>I’ve Enlisted One of the World’s Top Geologists</span>
+					<span>to Help Me Reveal… Live on Camera… What This</span>
+					<span>Coming <span class="mediumblue">Gold Mega-Catalyst</span> Is And How You Could Make</span>
+					<span>as Much as <span class="mediumblue">$101,000 in Profit</span>.”</span>
+				</p>
+
+				<p>
+					<span class="chkbox" tabindex="0" onkeypress="if (event.key == ' ') { $(this).find('input[type=\'checkbox\']').trigger('click'); event.preventDefault(); }">
+						<input type="checkbox" id="checkbox_1" tabindex="-1" class="cbhidden" onchange="$('#checkbox_2').prop('checked', this.checked)" checked>
+						<label for="checkbox_1" class="chklabel thin">
+							I would like to receive a free newsletter
+						</label>
+					</span>
+				</p>
+
+				<button class="register" onclick="register()">
+					Register for this FREE<br>
+					live Webinar Here!
+				</button>
+
+				<div class="result medium"></div>
+			</div>
+
+			<div id="timeblock">
+				<div class="calendar bluebox">
+					<img src="RGS_Hotlist_0617_Calendar.png" alt="June 14th" class="portrait" width="244" height="261"><br>
+					<br>
+					<p class="huge"><b>June 14th</b></p>
+					<p class="medium">at 5:00 PM EDT</p>
+					<br>
+				</div>
+
+				<div class="countdown bluebox">
+					<br>
+					<p class="large"><b>TIME LEFT UNTIL THE WEBINAR STARTS…</b></p><br>
+					<p id="ETA" class="huge"></p>
+				</div>
+			</div>
+
+			<div id="infoblock">
+				<div id="pic" class="bluebox" style="background-color: #05263a;">
+					<p><img src="RGS_Hotlist_0617_JimRickards.png" alt="Jim Rickards" class="portrait"></p>
+					<p class="thin"><i>Presented by best-selling author and gold expert…</i></p>
+					<p class="large"><b>JAMES G. RICKARDS</b></p>
+				</div>
+
+				<div id="checklist" class="thin">
+					<p><b>I’m going to show you…</b></p>
+
+					<p class="checked">How a class of “off-limit” gold stocks could become fair game and shoot up in price…</p>
+
+					<p class="checked">Why just as many gold stocks could be CRUSHED. But this isn’t a bad thing. In fact, it’s going to open up a unique opportunity not seen in years…</p>
+
+					<p class="checked">How it could compound an announcement from the Federal Reserve next week that could send physical gold prices much higher…</p>
+
+					<p class="checked">Why you’ll hear predictions of doom for the gold market (it’s important you understand the truth and know the real profit opportunity that’s being set up)…</p>
+
+					<p class="checked">Why we may see confirmation that gold will make a run at $2,000 sooner than anyone thinks…</p>
+				</div>
+			</div>
+
+			<div id="footer">
+				<div id="warning" class="pinkbox thin">
+					<p><b>WARNING: SPACE IS LIMITED & THESE LIVE TRAININGS ALWAYS FILL UP</b></p>
+				</div>
+
+				<div id="claim" class="thin">
+					<p class="bluebox" style="background-color: #05263a;"><i>Claim your spot below before it's too late!</i></p>
+				</div>
+
+				<div id="newsletter">
+					<p>
+						<span class="chkbox" tabindex="0" onkeypress="if (event.key == ' ') { $(this).find('input[type=\'checkbox\']').trigger('click'); event.preventDefault(); }">
+							<input type="checkbox" id="checkbox_2" tabindex="-1" class="cbhidden" onchange="$('#checkbox_1').prop('checked', this.checked)" checked>
+							<label for="checkbox_2" class="chklabel thin">
+								I would like to receive a free newsletter
+							</label>
+						</span>
+					</p>
+				</div>
+
+				<button class="register" onclick="register()">
+					YES! Reserve My Spot Now! >>
+				</button>
+
+				<div class="result medium"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var deadline = new Date(new Date().setHours(0,0,0,0));  /* Get current date with the time set to midnight. */
+			deadline.setDate(deadline.getDate() + 5);  /* Add 5 days to the current date. */
+			var countdown = setInterval(function() {  /* Update the countdown clock. */
+				var remaining = new Date(deadline - new Date());
+				if (remaining > 0) {  /* Display time remaining. */
+					$("#ETA").empty().append(Math.floor(remaining / 8.64e7) + " days<br>" + Math.floor((remaining % 8.64e7) / 3.6e6) + "h " + remaining.getMinutes() + "m " + remaining.getSeconds() + "s");
+				} else {  /* End the countdown. */
+					clearInterval(countdown);
+					$("#ETA").empty().append("Sorry you missed it.<br>Please check back later for new dates.");
+					/* Should we disable the buttons at this point? */
+				}
+			}, 200);
+
+			function register() {
+				if ($('#checkbox_1').prop("checked")) {  /* Make sure the checkboxs are checked. */
+					/* Checkboxes are checked, so register the user. */
+					$(".result").empty().append("Please wait…");
+					$.ajax({  /* Registers the user. */
+						url: "https://bl45immth4.execute-api.us-east-1.amazonaws.com/production/",
+						type: "GET",
+						dataType: "json",
+						async: true,
+						contentType: "application/json",
+						xhrFields: { withCredentials: false },
+						success: function (data, textStatus) {  /* Handles the returned data. */
+							var input = JSON.parse(data.body);
+							$(".result").empty().append(input.submitok);
+						},
+						error: function (xhr, textStatus, errorThrown) {  /* Shows an error message. */
+							$(".result").empty().append("Fail: " + textStatus);
+							$(".result").append("<br>Err: " + errorThrown);
+							console.log("Fail: " + textStatus);
+							console.log("Err: " + errorThrown);
+							console.log("XHR:");
+							console.log(xhr);
+						}
+					});
+				} else {  /* Remind the user to tick the checkbox first. */
+					alert("You must check the checkbox before proceeding.");
+				}
+			}
+		</script>
+	</body>
+</html>
