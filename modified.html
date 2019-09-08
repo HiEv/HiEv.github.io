@@ -254,7 +254,7 @@
 				</p>
 
 				<p>
-					<span class="chkbox" tabindex="0" onkeypress="if (event.key == ' ') { $(this).find('input[type=\'checkbox\']').trigger('click'); event.preventDefault(); }">
+					<span class="chkbox" tabindex="0" onkeypress="if ((event.key == ' ') || (event.key == 'Spacebar')) { $(this).find('input[type=\'checkbox\']').trigger('click'); return false; }">
 						<input type="checkbox" id="checkbox_1" tabindex="-1" class="cbhidden" onchange="$('#checkbox_2').prop('checked', this.checked)" checked>
 						<label for="checkbox_1" class="chklabel thin">
 							I would like to receive a free newsletter
@@ -319,7 +319,7 @@
 
 				<div id="newsletter">
 					<p>
-						<span class="chkbox" tabindex="0" onkeypress="if (event.key == ' ') { $(this).find('input[type=\'checkbox\']').trigger('click'); event.preventDefault(); }">
+						<span class="chkbox" tabindex="0" onkeypress="if ((event.key == ' ') || (event.key == 'Spacebar')) { $(this).find('input[type=\'checkbox\']').trigger('click'); return false; }">
 							<input type="checkbox" id="checkbox_2" tabindex="-1" class="cbhidden" onchange="$('#checkbox_1').prop('checked', this.checked)" checked>
 							<label for="checkbox_2" class="chklabel thin">
 								I would like to receive a free newsletter
